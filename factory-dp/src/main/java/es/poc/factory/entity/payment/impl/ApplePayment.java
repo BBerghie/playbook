@@ -5,18 +5,16 @@
 package es.poc.factory.entity.payment.impl;
 
 import es.poc.factory.entity.payment.Payment;
-import es.poc.factory.entity.payment.pojo.BasePaymentPOJO;
 import es.poc.factory.entity.payment.pojo.concrete.ApplePayPOJO;
 import lombok.extern.log4j.Log4j2;
 
 import java.util.HashSet;
 
 /**
- *
  * @author bgd
  */
 @Log4j2
-public class ApplePayment implements Payment {
+public class ApplePayment implements Payment<ApplePayPOJO> {
 
     @Override
     public String howAmI() {
@@ -24,13 +22,13 @@ public class ApplePayment implements Payment {
     }
 
     @Override
-    public boolean setPayment(BasePaymentPOJO paymentPOJO) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public boolean setPayment(ApplePayPOJO paymentPOJO) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public HashSet<ApplePayPOJO> getSetOfPayments(long id) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }
 

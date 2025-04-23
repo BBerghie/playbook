@@ -15,7 +15,7 @@ import java.util.HashSet;
 public interface Payment<T extends BasePaymentPOJO> {
     String howAmI();
     
-    <T extends BasePaymentPOJO> boolean setPayment(T paymentPOJO);
+    boolean setPayment(T paymentPOJO);
    
     HashSet<T> getSetOfPayments(long id);
 }
