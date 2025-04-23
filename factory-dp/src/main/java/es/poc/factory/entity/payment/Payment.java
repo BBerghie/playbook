@@ -4,10 +4,18 @@
  */
 package es.poc.factory.entity.payment;
 
+import es.poc.factory.entity.payment.pojo.BasePaymentPOJO;
+import java.util.HashSet;
+
 /**
  *
  * @author bgd
+ * @param <T>
  */
-public interface Payment {
+public interface Payment<T extends BasePaymentPOJO> {
     String howAmI();
+    
+    <T extends BasePaymentPOJO> boolean setPayment(T paymentPOJO);
+   
+    HashSet<T> getSetOfPayments(long id);
 }

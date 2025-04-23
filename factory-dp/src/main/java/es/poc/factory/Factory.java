@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package es.poc.factory;
 
 import es.poc.factory.entity.payment.Payment;

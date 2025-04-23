@@ -5,6 +5,8 @@
 package es.poc.factory.entity.payment.impl;
 
 import es.poc.factory.entity.payment.Payment;
+import es.poc.factory.entity.payment.pojo.BasePaymentPOJO;
+import java.util.HashSet;
 
 /**
  *
@@ -17,4 +19,13 @@ public class GooglePayment implements Payment {
         return GooglePayment.class.getName();
     }
 
+    @Override
+    public boolean setPayment(BasePaymentPOJO paymentPOJO) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public HashSet getSetOfPayments(long id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
