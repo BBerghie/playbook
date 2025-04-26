@@ -1,17 +1,15 @@
-USE `social_media`
+DROP TABLE IF EXISTS `sqlPlaybook`.`author`;
 
-DROP TABLE IF EXISTS `author`
-
-CREATE TABLE `author`(
-	athorId bigint primary key AUTO_INCREMENT,
-	name varchar(128) charset utf8,
-	lastName varchar(128) charset utf8,
-	birthNate DATETIME
+CREATE TABLE `sqlPlaybook`.`author`(
+        authorId bigint primary key AUTO_INCREMENT,
+        name varchar(128) charset utf8,
+        lastName varchar(128) charset utf8,
+        birthDate DATETIME
 );
 
-INSERT INTO author (name, lastName, birthNate) values 
-	("Joel", "Spolsky", NOW()),
-	("Bernard", "Russell", NOW()),
-	("Karl", "Polanyi", NOW()),
-	("Naomi", "Klein", NOW())
-);
+INSERT INTO `sqlPlaybook`.`author` (name, lastName, birthDate) values
+        ("Joel", "Spolsky", NOW()),
+        ("Bernard", "Russell", NOW()),
+        ("Karl", "Polanyi", NOW()),
+        ("Naomi", "Klein", NOW());
+

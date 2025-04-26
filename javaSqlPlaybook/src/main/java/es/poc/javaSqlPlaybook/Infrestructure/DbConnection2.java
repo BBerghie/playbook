@@ -12,15 +12,12 @@ public class DbConnection2 {
 
     static
     {
-        final String DATA_BASE_URL = "jdbc:mariadb://localhost:3306/social_media";
-        final String DB_USER = "root";
-        final String DB_PW = "web";
         try {
-            con = DriverManager.getConnection(DATA_BASE_URL, DB_USER, DB_PW);
+            con = DriverManager.getConnection(Constants.CONNECTION.DATA_BASE_URL, Constants.CONNECTION.DB_USER, Constants.CONNECTION.DB_PW);
         }
         catch (SQLException e) {
             Logger.getLogger(DbConnection2.class.getName()).log(Level.SEVERE, "There is no way to create a Connection :( ");
-            throw new RuntimeException();
+                throw new RuntimeException();
         }
     }
     public static Connection getConnection()

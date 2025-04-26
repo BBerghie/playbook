@@ -1,7 +1,4 @@
--- MariaDB script
-
--- Drop the database if it exists
-DROP DATABASE IF EXISTS author;
+DROP DATABASE IF EXISTS `sqlPlaybook`;
 
 -- Create the database
-CREATE DATABASE author;
+CREATE DATABASE `sqlPlaybook`;
