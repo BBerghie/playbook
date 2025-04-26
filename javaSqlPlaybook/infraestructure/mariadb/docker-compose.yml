@@ -1,0 +1,14 @@
+services:
+  bancoMariaDb:
+    image: mariadb
+    restart: always
+    container_name: bancoMariaDb
+    ports:
+      - "3306:3306"
+    volumes:
+      - .:/code
+      - ./sql:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=web
+      - MYSQL_DATABASE=web
+

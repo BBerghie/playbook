@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+@Deprecated
 public class DbConnection {
     private static DbConnection instance = null;
     private Connection conn = null;

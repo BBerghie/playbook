@@ -16,11 +16,11 @@ public class DbConnection2 {
         final String DB_USER = "root";
         final String DB_PW = "web";
         try {
-            Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(DATA_BASE_URL, DB_USER, DB_PW);
         }
-        catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
+        catch (SQLException e) {
+            Logger.getLogger(DbConnection2.class.getName()).log(Level.SEVERE, "There is no way to create a Connection :( ");
+            throw new RuntimeException();
         }
     }
     public static Connection getConnection()
