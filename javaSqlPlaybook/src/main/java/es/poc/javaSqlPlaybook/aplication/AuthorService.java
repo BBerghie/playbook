@@ -7,7 +7,6 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Date;
@@ -20,6 +19,7 @@ public class AuthorService implements AuthorDAO {
 
     @Override
     public HashSet<AuthorPOJO> getAll() {
+        
         return null;
     }
 
@@ -41,10 +41,10 @@ public class AuthorService implements AuthorDAO {
     @Override
     public Optional<AuthorPOJO> addAuthor(String name, String lastName, Date birthDate) throws SQLException {
 
+        String sql = " INSERT INTO author(name, lastName, birthDate) VALUES (?, ?, ?)";
+
         DatabaseConnection databaseConnection = DatabaseConnection.getInstance();
         Connection connection = databaseConnection.getConnection();
-
-        String sql = " INSERT INTO author(name, lastName, birthDate) VALUES (?, ?, ?)";
 
         PreparedStatement stmt = connection.prepareStatement(sql);
 

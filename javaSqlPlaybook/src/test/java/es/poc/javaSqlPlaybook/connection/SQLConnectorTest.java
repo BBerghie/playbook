@@ -49,5 +49,7 @@ public class SQLConnectorTest {
         dataProductName = connection.getMetaData().getDatabaseProductName();
 
         assertNotNull(dataProductName, "Error en coexión a BBDD");
+
+        if (connection.isClosed()) connection.close();
     }
 }

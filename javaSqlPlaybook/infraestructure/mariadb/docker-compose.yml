@@ -1,14 +1,13 @@
 services:
-  bancoMariaDb:
+  sqlPlaybookMariaDb:
     image: mariadb
     restart: always
-    container_name: bancoMariaDb
+    container_name: sqlPlaybookMariaDb
     ports:
       - "3306:3306"
     volumes:
       - .:/code
       - ./sql:/docker-entrypoint-initdb.d
     environment:
-      - MYSQL_ROOT_PASSWORD=web
-      - MYSQL_DATABASE=web
-
+      - MYSQL_ROOT_PASSWORD=root
+      #- MYSQL_DATABASE=web

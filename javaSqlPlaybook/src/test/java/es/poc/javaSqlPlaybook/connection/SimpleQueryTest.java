@@ -1,5 +1,6 @@
 package es.poc.javaSqlPlaybook.connection;
 
+import es.poc.javaSqlPlaybook.Infrestructure.DatabaseConnection;
 import es.poc.javaSqlPlaybook.aplication.AuthorService;
 import es.poc.javaSqlPlaybook.entity.pojo.AuthorPOJO;
 import lombok.extern.log4j.Log4j2;
@@ -7,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.sql.SQLException;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Optional;
 
 @Log4j2
@@ -45,22 +47,25 @@ public class SimpleQueryTest {
 //    }
 
 
-//    @Test
-//    public void author_insert_query() throws SQLException {
-//        AuthorPOJO christopher = new AuthorPOJO(-1, "Christopher", "Paolini", new Date(437875200000L));
-//
-//        log.info(christopher.toString());
-//        Optional<AuthorPOJO> newAuthorPOJO = authorService.addAuthor(christopher.name(), christopher.lastName(), christopher.date());
-//
-//
-//        log.info(" Christopher hasCode " + christopher.hashCode());
-//    }
+    @Test
+    public void author_insert_query() throws SQLException {
 
-//    @Test
-//    public void author_update_query(){
-//
-//    }
-//
+        AuthorPOJO christopher = new AuthorPOJO(-1, "Christopher", "Paolini", new Date(437875200000L));
+
+        log.info(christopher.toString());
+        Optional<AuthorPOJO> newAuthorPOJO = authorService.addAuthor(christopher.name(), christopher.lastName(), christopher.date());
+
+
+        log.info(" Christopher hasCode " + christopher.hashCode());
+    }
+
+
+
+    @Test
+    public void author_update_query(){
+        authorService.getAll();
+    }
+
 //    @Test
 //    public void author_delete_query(){
 //
